@@ -307,7 +307,7 @@ cd $working_dir
 # so we have to respecify the manifest data
 # TODO we should rewrite write_manfiest.sh to produce inputs compatible for singlejar (Issue #27)
 singlejar_options="--normalize --dont_change_compression" # add in --verbose for more details from command
-singlejar_mainclass="--main_class org.springframework.boot.loader.JarLauncher"
+singlejar_mainclass="--main_class org.springframework.boot.loader.launch.JarLauncher"
 $singlejar_cmd $singlejar_options $singlejar_mainclass \
     --deploy_manifest_lines "Start-Class: $mainclass" \
     --sources $raw_output_jar \
