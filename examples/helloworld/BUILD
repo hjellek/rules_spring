@@ -68,3 +68,10 @@ java_test(
     deps = [ ":helloworld_lib" ] + test_deps + springboottest_deps,
     resources = glob(["src/test/resources/**"]),
 )
+
+java_test(
+    name = "SampleNesteFileSystemUnitTest",
+    srcs = ["src/test/java/com/sample/SampleNesteFileSystemUnitTest.java"],
+    deps = [ ":helloworld_lib" ] + test_deps + springboottest_deps,
+    resources = glob(["src/test/resources/**"]),
+)
